@@ -1,0 +1,66 @@
+.countdown {
+  display: flex;
+  justify-content: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  box-sizing: border-box;
+  color: #010101;
+  text-align: right;
+  line-height: 114%;
+  border-radius: 12px;
+  padding: 24px 18px;
+  width: auto;
+  align-items: flex-start;
+}
+
+.time-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 28px;
+  margin: 0 2px;
+}
+
+.time {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.label {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 8px;
+  text-align: center;
+  color: #010101;
+  margin-top: 2px;
+}
+
+.colon {
+  font-weight: 700;
+  font-size: 28px;
+
+  color: rgba(1, 1, 1, 0.2);
+  margin: 0 2px;
+}
+
+#seconds {
+  color: #0f7c41;
+}
+
+/* Стилі для планшетів і десктопів */
+@media (min-width: 768px) {
+  .countdown {
+    width: 296px;
+    padding: 2px 22px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .countdown {
+    border-radius: 12px;
+    padding: 16px;
+    width: 384px;
+    height: 64px;
+  }
+}

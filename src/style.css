@@ -1,0 +1,64 @@
+:root {
+  --font-family: "Montserrat", sans-serif;
+  --second-family: "Gotham Pro", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #f1f1f1;
+  margin: 20px;
+  box-sizing: border-box;
+  background-image: url(/public/assets/image/mobile-min.png);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-origin: border-box;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+.logo {
+  margin-bottom: 16px;
+}
+
+.logo-img {
+  width: 100px;
+  height: 30px;
+}
+
+/* Стилі для планшетів і десктопів */
+@media (min-width: 768px) {
+  body {
+    margin: 29px 32px 0 32px;
+    background-image: url(/public/assets/image/table.png);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-origin: border-box;
+  }
+  .logo {
+    margin-bottom: 0;
+  }
+  .info-register-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .info {
+    min-width: 300px;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    margin: 29px 140px 0 112px;
+    background-image: url(/public/assets/image/decst.png);
+    background-repeat: no-repeat;
+    background-position: 0 50px;
+    background-origin: border-box;
+  }
+}

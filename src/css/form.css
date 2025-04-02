@@ -1,0 +1,133 @@
+/* Контейнер для форми в модальному вікні */
+#modalFormContainer {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+#registrationForm input[type="text"],
+#registrationForm input[type="email"],
+#registrationForm input[type="tel"] {
+  width: 320px;
+  height: 48px;
+  padding: 12px 16px;
+  margin-bottom: 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: #f9f9f9;
+  box-sizing: border-box;
+  border-radius: 0;
+}
+
+/* Стилі для чекбокса */
+#registrationForm label {
+  width: 320px;
+  height: auto;
+  margin-bottom: 32px;
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 133%;
+  color: #010101;
+}
+
+.custom-checkbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.custom-checkbox input {
+  display: none;
+}
+
+.checkmark {
+  width: 16px;
+  height: 16px;
+  border: 2px solid #0f7c41;
+  display: flex;
+  align-items: center;
+  margin-right: 8px;
+}
+
+.checkmark svg {
+  display: none;
+}
+
+.custom-checkbox input:checked + .checkmark svg {
+  display: block;
+}
+
+#registrationForm label a {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 133%;
+  color: #3577f7;
+}
+
+#registrationForm button {
+  box-sizing: border-box;
+  width: 320px;
+  height: 56px;
+  padding: 20px 24px;
+  background: #0f7c41;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  line-height: 150%;
+  text-align: center;
+  color: #fff;
+}
+
+#registrationForm button:hover {
+  background-color: #218838;
+}
+
+.form-section {
+  width: 320px;
+  height: 324px;
+  margin: 0 auto;
+}
+
+/* Стилі для планшетів і десктопів */
+@media (min-width: 768px) {
+  #registrationForm button {
+    width: 296px;
+    height: 64px;
+  }
+
+  #registrationForm input[type="text"],
+  #registrationForm input[type="email"],
+  #registrationForm input[type="tel"] {
+    margin-bottom: 20px;
+    padding: 12px 16px;
+    width: 296px;
+    height: 48px;
+    background: #f2f4fa;
+    font-weight: 400;
+    line-height: 150%;
+  }
+
+  .form-section {
+    width: 296px;
+    height: 332px;
+  }
+}
+
+@media (min-width: 1024px) {
+  #registrationForm input[type="text"],
+  #registrationForm input[type="email"],
+  #registrationForm input[type="tel"] {
+    padding: 12px 16px;
+    width: 384px;
+    height: 48px;
+  }
+  #registrationForm button {
+    padding: 20px 24px;
+    width: 384px;
+    height: 64px;
+  }
+}

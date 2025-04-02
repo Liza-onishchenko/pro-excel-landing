@@ -1,0 +1,91 @@
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+
+.modal-content {
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  padding: 29px 20px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+/* Заголовок модального вікна */
+.modal-content::before {
+  display: block;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 140%;
+  text-align: center;
+  color: #010101;
+  margin-top: 29px;
+}
+
+.close {
+  position: absolute;
+  top: 28px;
+  right: 20px;
+  font-size: 24px;
+  color: #000;
+  cursor: pointer;
+}
+
+.logo1 {
+  margin-top: 29px;
+  margin-left: 20px;
+  margin-bottom: 29px;
+}
+
+/* Приховування форми на мобільних */
+.form-section {
+  display: none;
+  box-sizing: border-box;
+}
+
+/* Відображення кнопки для мобільних */
+.mobile-register-button {
+  display: block;
+  width: 280px;
+  height: 56px;
+  background: #0f7c41;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Стилі для планшетів і десктопів */
+@media (min-width: 768px) {
+  .form-section {
+    display: block;
+    width: 296px;
+    margin: 0;
+  }
+
+  .mobile-register-button {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .form-section {
+    margin-top: 24px;
+    width: 384px;
+    height: 332px;
+  }
+}

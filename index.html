@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Навчіться створювати Excel-таблиці на pro-рівні</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/style.css" />
+    <link rel="stylesheet" href="/src/css/form.css" />
+    <link rel="stylesheet" href="/src/css/info.css" />
+    <link rel="stylesheet" href="/src/css/timer.css" />
+    <link rel="stylesheet" href="/src/css/modal.css" />
+  </head>
+  <body>
+    <section class="registration-section">
+      <header class="logo">
+        <img id="logo" src="/public/assets/image/logo.png" alt="GO IT Logo" class="logo-img" />
+      </header>
+      <div class="info-register-container">
+        <div class="info">
+          <section class="webinar-info">
+            <span class="bordered-text"><span>Безоплатний вебінар</span></span>
+            <span class="bordered-text">
+            <span>Старт: <strong>10 січня 19:30</strong></span>
+            </span>
+          </section>
+  
+          <section class="section-text">
+            <h1>Навчіться створювати Excel-таблиці на pro-рівні</h1>
+            <p class="subtitle">
+              Опануйте функціонал Microsoft Excel, автоматизуйте свою роботу та створюйте таблиці швидко і в задоволення
+            </p>
+          </section>
+        </div>
+  
+        <section class="register-border">
+          <h3 class="discount-text">Реєструйся просто зараз</h3>
+  
+          <div id="countdown" class="countdown">
+            <div class="time-block">
+              <span class="time" id="days">00</span>
+              <span class="label">днів</span>
+            </div>
+              <span class="colon">:</span>
+            <div class="time-block">
+              <span class="time" id="hours">00</span>
+              <span class="label">годин</span>
+            </div>
+              <span class="colon">:</span>
+            <div class="time-block">
+              <span class="time" id="minutes">00</span>
+              <span class="label">хвилин</span>
+            </div>
+              <span class="colon">:</span>
+            <div class="time-block">
+              <span class="time" id="seconds">00</span>
+              <span class="label">секунд</span>
+            </div>
+          </div>
+  
+          <div class="form-section">
+            <form id="registrationForm">
+              <input type="text" id="name" name="name" placeholder="Введи своє ім'я" required />
+              <input type="email" id="email" name="email" placeholder="Введи свій E-mail" required pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$" />
+            <div class="phone-input">
+                <input type="tel" id="phone" name="phone" placeholder="+380 95 -- -- ---" required pattern="^\+?380\d{9}$" />
+            </div>
+              <label class="custom-checkbox">
+                <input type="checkbox" id="privacyPolicy" required />
+                <span class="checkmark">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="11" height="8" fill="none">
+                    <path stroke="#0F7C41" stroke-width="2" d="m1.639 3.15 3.055 3.088L10.192.905" />
+                  </svg>
+                </span>
+                <span>Згоден з <a href="#">Політика конфіденційності</a> та <a href="#">Умови користування</a></span>
+              </label>
+              <button type="submit">Зареєструватися</button>
+            </form>
+          </div>
+  
+          <button id="openModalButton" class="mobile-register-button">Зареєструватися</button>
+        </section>
+      </div>
+  
+      <div id="modal" class="modal">
+        <header class="logo1">
+          <img src="/public/assets/image/logo.png" alt="GO IT Logo" class="logo-img" />
+          <span id="closeModalButton" class="close">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 6L18 18" stroke="black" stroke-width="2" stroke-linecap="round" />
+              <path d="M18 6L6 18" stroke="black" stroke-width="2" stroke-linecap="round" />
+            </svg>
+          </span>
+        </header>
+  
+        <div class="modal-content">
+          <div id="modalFormContainer">
+            <h3 class="discount-text">Реєструйся просто зараз</h3>
+            </div>
+        </div>
+      </div>
+    </section>
+  </body>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

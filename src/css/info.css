@@ -1,0 +1,190 @@
+/* Стилі для інформації про вебінар */
+.webinar-info {
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  align-items: flex-start;
+}
+
+.bordered-text {
+  display: inline-block;
+  position: relative;
+  border: 0.4px solid #0f7c41;
+  padding: 4px 8px;
+  color: #0f7c41;
+  font-size: 16px;
+  line-height: 1;
+}
+
+.bordered-text span {
+  display: inline;
+}
+
+/* 4 квадратики в кутах */
+.bordered-text::before,
+.bordered-text::after,
+.bordered-text span::before,
+.bordered-text span::after {
+  content: "";
+  width: 4px;
+  height: 4px;
+  background-color: #0f7c41;
+  position: absolute;
+}
+
+/* Верхній лівий */
+.bordered-text::before {
+  top: -2px;
+  left: -2px;
+}
+
+/* Верхній правий */
+.bordered-text::after {
+  top: -2px;
+  right: -2px;
+}
+
+/* Нижній лівий */
+.bordered-text span::before {
+  bottom: -2px;
+  left: -2px;
+}
+
+/* Нижній правий */
+.bordered-text span::after {
+  bottom: -2px;
+  right: -2px;
+}
+
+.section-text {
+  font-family: "Montserrat", sans-serif;
+  margin-top: 16px;
+  margin-bottom: 24px;
+}
+
+.section-text h1 {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 125%;
+  color: #010101;
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+.section-text .subtitle {
+  font-size: 16px;
+  font-weight: 400;
+  color: #010101;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.section-text .discount-text {
+  font-size: 20px;
+  font-weight: 700;
+  color: #000;
+  text-transform: uppercase;
+}
+.register-border {
+  box-sizing: border-box;
+  padding: 5% 3%;
+  display: block;
+  box-shadow: 0 0 20px 0 rgba(15, 124, 65, 0.2);
+  background-color: #ffffff;
+  min-height: 242px;
+  width: 320px;
+  position: relative;
+}
+.discount-text {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 140%;
+  text-align: center;
+  color: #010101;
+  margin: 0;
+}
+
+/* Стилі для планшетів і десктопів */
+@media (min-width: 768px) {
+  .webinar-info {
+    margin-top: 45px;
+  }
+
+  .bordered-text {
+    display: inline-block;
+    padding: 8px 16px;
+    color: #0f7c41;
+    font-size: 16px;
+    line-height: 1;
+    margin-top: 12px;
+  }
+  .section-text {
+    font-family: "Montserrat", sans-serif;
+    margin-top: 4px;
+    margin-bottom: 24px;
+    max-width: 336px;
+    height: 296px;
+  }
+  .section-text h1 {
+    margin-top: 4px;
+    line-height: 122%;
+    text-align: left;
+  }
+  .section-text .subtitle {
+    margin-top: 24px;
+  }
+  .register-border {
+    padding: 32px 20px;
+    width: 336px;
+    height: 518px;
+    box-shadow: 0 0 20px 0 rgba(15, 124, 65, 0.2);
+    background: #fff;
+    max-width: 336px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    position: relative;
+    margin: 0 auto;
+    max-width: 100%;
+    min-height: 242px;
+  }
+  .discount-text {
+    width: 296px;
+  }
+  .section-text h1 {
+    margin-top: 4px;
+    line-height: 122%;
+    text-align: left;
+  }
+}
+
+@media (min-width: 1024px) {
+  .webinar-info {
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  .section-text {
+    margin-top: 40px;
+  }
+  .section-text h1 {
+    font-size: 56px;
+    width: 624px;
+    height: 204px;
+  }
+  .section-text .subtitle {
+    font-size: 20px;
+    width: 554px;
+    height: 84px;
+  }
+  .register-border {
+    padding: 52px;
+    margin-right: 0px;
+    width: 488px;
+    height: 580px;
+  }
+  .discount-text {
+    width: 384px;
+  }
+}
