@@ -17,6 +17,7 @@ function updateCountdown() {
     minutesElement.textContent = "00";
     secondsElement.textContent = "00";
     clearInterval(countdownInterval);
+    sendDataToApi(); // Функція для відправки даних на тестовий API
     return;
   }
 
@@ -54,3 +55,34 @@ function updateClonedCountdown() {
 }
 
 setInterval(updateClonedCountdown, 1000);
+
+//для відправки запиту до тестового API
+
+const name = document.getElementById("name").value;
+const email = document.getElementById("email").value;
+const phone = document.getElementById("phone").value;
+
+const postData = {
+  name: name,
+  email: email,
+  phone: phone,
+};
+
+// Запит на тестовий API
+fetch("https://jsonplaceholder.typicode.com/posts", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify(postData),
+})
+  .then((response) => response.json())
+  .then((data) => {
+    console.log("Data sent to API:", data);
+    localStorage.setItem("formSubmitted", "true");
+    alert("Заявка успішно відправлена!");
+  })
+  .catch((error) => {
+    console.error("Error:", error);
+    alert("Виникла помилка при відправці даних.");
+  });
