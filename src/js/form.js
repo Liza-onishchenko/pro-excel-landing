@@ -79,10 +79,7 @@ fetch("https://jsonplaceholder.typicode.com/posts", {
   .then((response) => response.json())
   .then((data) => {
     console.log("Data sent to API:", data);
-    localStorage.setItem("formSubmitted", "true");
-    alert("Заявка успішно відправлена!");
   })
   .catch((error) => {
     console.error("Error:", error);
-    alert("Виникла помилка при відправці даних.");
   });
